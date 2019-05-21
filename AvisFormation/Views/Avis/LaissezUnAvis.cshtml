@@ -1,0 +1,31 @@
+﻿@model string
+@{
+    ViewBag.Title = "LaissezUnAvis";
+}
+
+<h2>Laissez Un Avis</h2>
+@using (Html.BeginForm("SaveComment", "Avis", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="nom">Nom : </label>
+        <input type="text" name="nom" id="nom" class="form-control" required />
+    </div>
+    <br />
+    <label for="note">Note : </label>
+    <select name="note" class="form-control">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+
+    </select>
+    <br />
+    <div class="form-group">
+        <label for="description">Description: </label>
+        <textarea id="description" name="description" rows="6" class="form-control"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Envoyer" />
+    <input type="hidden"  value="@Model" name="nomSeo" />
+}
+

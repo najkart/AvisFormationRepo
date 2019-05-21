@@ -1,0 +1,24 @@
+﻿
+@model AvisFormation.Models.DetailFormationVM
+@{
+    ViewBag.Title = "DetailFormation";
+}
+<h1 style="color:blue">@TempData["Message"]</h1>
+<h2>DetailFormation</h2>
+<p>nom formation: @Model.FormationInstance.Nom</p>
+<p>Url formation: @Model.FormationInstance..Url</p>
+<p>Description formation: @Model.FormationInstance.Description</p>
+<p> Nom Seo formation: @Model.FormationInstance.NomSeo</p>
+<p><a href=@Url.Action("LaissezUnAvis", "Avis", new { nomSeo = @Model.FormationInstance.NomSeo })>Laissez un avis</a></p>
+
+@if (Model.FormationInstance.Avis.Count == 0)
+{
+    <p>Aucun avis pour cette formation</p>
+}
+@{ foreach (var item in Model.FormationInstance.Avis)
+    {
+    <p>@item.Nom @item.Description @item.Note @item.DateAvis</p>
+        
+    }
+}
+<p>La note moyenne de la formation : @Model.moyenne /5</p>

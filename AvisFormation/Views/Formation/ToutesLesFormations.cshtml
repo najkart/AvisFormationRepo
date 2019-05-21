@@ -1,0 +1,20 @@
+﻿@model  AvisFormation.Models.ToutesLesFormationsVM
+@{
+    ViewBag.Title = "ToutesLesFormations";
+}
+
+<h2>Toutes Les Formations</h2>
+<p> Voici nos @Model.ListeFormations.Count formation en ville de @Model.City</p>
+
+@{ foreach (var item in @Model.ListeFormations)
+    {
+
+        <a href=@Url.Action("DetailFormation", "Formation",new {idFormation=item.Id })>@item.Nom</a>
+        <a href=@Url.Action("LaissezUnAvis", "Avis",new {idFormation=item.Id })>Laissez un avis</a>
+        <br />
+
+
+
+    }
+}
+

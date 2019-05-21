@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AvisFormationDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AvisFormationDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MessageDb" EntityType="AvisFormationDbModel.MessageDb" />
+    <EntitySet Name="Avis" EntityType="AvisFormationDbModel.Avis" />
+    <EntitySet Name="Formation" EntityType="AvisFormationDbModel.Formation" />
+    <AssociationSet Name="FK__Avis__IdFormatio__2B3F6F97" Association="AvisFormationDbModel.FK__Avis__IdFormatio__2B3F6F97">
+      <End Role="Formation" EntitySet="Formation" />
+      <End Role="Avis" EntitySet="Avis" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="MessageDb">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nom" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Avis">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Note" Type="Double" Nullable="false" />
+    <Property Name="IdFormation" Type="Int32" />
+    <Property Name="DateAvis" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Formation" Relationship="AvisFormationDbModel.FK__Avis__IdFormatio__2B3F6F97" FromRole="Avis" ToRole="Formation" />
+  </EntityType>
+  <EntityType Name="Formation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NomSeo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Avis" Relationship="AvisFormationDbModel.FK__Avis__IdFormatio__2B3F6F97" FromRole="Formation" ToRole="Avis" />
+  </EntityType>
+  <Association Name="FK__Avis__IdFormatio__2B3F6F97">
+    <End Type="AvisFormationDbModel.Formation" Role="Formation" Multiplicity="0..1" />
+    <End Type="AvisFormationDbModel.Avis" Role="Avis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Formation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Avis">
+        <PropertyRef Name="IdFormation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

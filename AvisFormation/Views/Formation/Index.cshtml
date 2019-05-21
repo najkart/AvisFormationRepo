@@ -1,0 +1,26 @@
+﻿@model List<Data.Formation>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron text-center ">
+    <h1>Avis Formation</h1>
+    <p>Choisissez la meilleure formation!</p>
+</div>
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-12 text-center" >
+    <span class="glyphicon glyphicon-shopping-cart logo-small" ></span>
+        <h1>Conversion</h1><p>Amélioer votre taux de conversion</p>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-12"><span class="glyphicon glyphicon-qrcode logo-small"></span></div>
+    <div class="col-lg-3 col-md-6 col-xs-12"><span class="glyphicon glyphicon-film logo-small"></span></div>
+    <div class="col-lg-3 col-md-6 col-xs-12"><span class="glyphicon glyphicon-envelope logo-small"></span></div>
+    
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-lg-2 col-md-6 col-xs-12">
+        <a href=@Url.Action("DetailFormation","Formation",new {nomSeo=item.NomSeo })> @item.Nom</a> <br /> </div>
+        }
+    </div>
