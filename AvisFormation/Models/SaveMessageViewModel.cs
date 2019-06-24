@@ -5,10 +5,10 @@ using System.Web;
 
 namespace AvisFormation.Models
 {
-    public class SaveCommentViewModel
-    {      
+    public class SaveMessageViewModel
+    {
+        public string Nom { get; set; }
+        public string Email { get; set; }
         public string Description { get; set; }
-        public string Note { get; set; }
-        public string NomSeo { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace AvisFormation.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult SaveMessage(SaveCommentViewModel comment)
+        public ActionResult SaveMessage(SaveMessageViewModel comment)
         {
             var message = new MessageDb();
             var repository = new MessageRepository();

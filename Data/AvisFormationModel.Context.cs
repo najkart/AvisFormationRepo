@@ -25,8 +25,13 @@ namespace Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<MessageDb> MessageDb { get; set; }
         public virtual DbSet<Avis> Avis { get; set; }
         public virtual DbSet<Formation> Formation { get; set; }
-        public virtual DbSet<MessageDb> MessageDb { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
     }
 }

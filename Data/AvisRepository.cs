@@ -25,6 +25,15 @@ namespace Data
                 return Context.Avis.Where(a => a.IdFormation == IdFormation).ToList();
             }
 
+        }
+        public List<Avis> GetAvisByIdUser(string idUser)
+        {
+            using (var Context = new AvisFormationDbEntities())
+            {
+                return Context.Avis.Where(a => a.Id_users == idUser).ToList();
             }
+
+        }
+
     }
 }

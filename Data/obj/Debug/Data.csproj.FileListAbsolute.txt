@@ -12,3 +12,17 @@ C:\Users\stagiaire\source\repos\AvisFormation\Data\obj\Debug\Data.csproj.CoreCom
 C:\Users\stagiaire\source\repos\AvisFormation\Data\obj\Debug\Data.csproj.CopyComplete
 C:\Users\stagiaire\source\repos\AvisFormation\Data\obj\Debug\Data.dll
 C:\Users\stagiaire\source\repos\AvisFormation\Data\obj\Debug\Data.pdb
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\Data.dll.config
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\Data.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\Data.pdb
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\EntityFramework.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\EntityFramework.xml
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\obj\Debug\Data.dll
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\obj\Debug\Data.pdb
+C:\Users\najwa\Desktop\AvisFormationGit\AvisFormationRepo\Data\obj\Debug\Data.csprojAssemblyReference.cache

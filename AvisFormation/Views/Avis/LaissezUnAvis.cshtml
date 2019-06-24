@@ -6,11 +6,7 @@
 <h2>Laissez Un Avis</h2>
 @using (Html.BeginForm("SaveComment", "Avis", FormMethod.Post))
 {
-    <div class="form-group">
-        <label for="nom">Nom : </label>
-        <input type="text" name="nom" id="nom" class="form-control" required />
-    </div>
-    <br />
+   
     <label for="note">Note : </label>
     <select name="note" class="form-control">
         <option value="1">1</option>

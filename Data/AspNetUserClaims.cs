@@ -12,16 +12,13 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Avis
+    public partial class AspNetUserClaims
     {
         public int Id { get; set; }
-        public string Description { get; set; }
-        public double Note { get; set; }
-        public Nullable<int> IdFormation { get; set; }
-        public System.DateTime DateAvis { get; set; }
-        public string Id_users { get; set; }
+        public string UserId { get; set; }
+        public string ClaimType { get; set; }
+        public string ClaimValue { get; set; }
     
-        public virtual Formation Formation { get; set; }
         public virtual AspNetUsers AspNetUsers { get; set; }
     }
 }

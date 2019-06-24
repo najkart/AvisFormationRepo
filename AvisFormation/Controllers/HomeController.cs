@@ -10,7 +10,7 @@ namespace AvisFormation.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return   RedirectToAction("Index", "Formation"); 
         }
 
         public ActionResult About()

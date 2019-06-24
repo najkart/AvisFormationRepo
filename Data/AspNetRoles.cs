@@ -12,16 +12,18 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Avis
+    public partial class AspNetRoles
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public double Note { get; set; }
-        public Nullable<int> IdFormation { get; set; }
-        public System.DateTime DateAvis { get; set; }
-        public string Id_users { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public AspNetRoles()
+        {
+            this.AspNetUsers = new HashSet<AspNetUsers>();
+        }
     
-        public virtual Formation Formation { get; set; }
-        public virtual AspNetUsers AspNetUsers { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
     }
 }

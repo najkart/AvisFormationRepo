@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Data</RootNamespace>
     <AssemblyName>Data</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AspNetRoles.cs">
+      <DependentUpon>AvisFormationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaims.cs">
+      <DependentUpon>AvisFormationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogins.cs">
+      <DependentUpon>AvisFormationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUsers.cs">
+      <DependentUpon>AvisFormationModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Avis.cs">
       <DependentUpon>AvisFormationModel.tt</DependentUpon>
     </Compile>
@@ -69,6 +81,9 @@
       <DependentUpon>AvisFormationModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="AvisRepository.cs" />
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>AvisFormationModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Formation.cs">
       <DependentUpon>AvisFormationModel.tt</DependentUpon>
     </Compile>

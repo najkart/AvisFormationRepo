@@ -16,14 +16,16 @@ namespace AvisFormation
           
             routes.MapRoute(
                 name: "Detail",
-                url: "Formation/{nomSeo}",
+                url: "Formations/{nomSeo}",
                 defaults: new { controller = "Formation", action = "DetailFormation" }
                 );
+
             routes.MapRoute(
                 name: "laisserAvis",
                 url: "Laisser-un-avis/{nomSeo}",
                 defaults: new { controller = "Avis", action = "LaissezUnAvis" }
                 );
+
             routes.MapRoute(
               name: "Default",
               url: "{controller}/{action}/{id}",

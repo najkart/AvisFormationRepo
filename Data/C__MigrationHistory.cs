@@ -12,16 +12,11 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Avis
+    public partial class C__MigrationHistory
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public double Note { get; set; }
-        public Nullable<int> IdFormation { get; set; }
-        public System.DateTime DateAvis { get; set; }
-        public string Id_users { get; set; }
-    
-        public virtual Formation Formation { get; set; }
-        public virtual AspNetUsers AspNetUsers { get; set; }
+        public string MigrationId { get; set; }
+        public string ContextKey { get; set; }
+        public byte[] Model { get; set; }
+        public string ProductVersion { get; set; }
     }
 }

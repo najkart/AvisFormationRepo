@@ -9,8 +9,8 @@
 @{ foreach (var item in @Model.ListeFormations)
     {
 
-        <a href=@Url.Action("DetailFormation", "Formation",new {idFormation=item.Id })>@item.Nom</a>
-        <a href=@Url.Action("LaissezUnAvis", "Avis",new {idFormation=item.Id })>Laissez un avis</a>
+        <a href=@Url.Action("DetailFormation", "Formation",new {nomSeo=item.NomSeo})>@item.Nom</a>
+        <a href=@Url.Action("LaissezUnAvis", "Avis",new {nomSeo=item.NomSeo })>Laissez un avis</a>
         <br />
 
 
